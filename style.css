@@ -1,5 +1,31 @@
+* {
+    box-sizing: border-box;
+  }
+
+
 .btn {
-    size: 150%;
+  
     font-size: 4em;
     margin: 5px;
 }
+
+#user-choice, #computer-choice {
+    font-size: 4em;
+    border-bottom: 2px solid black;
+    margin-top: 2px;
+    top: 50%;
+    bottom: 0;
+}
+
+
+ul {
+    list-style: none;
+}
+
+
+.players {
+    background: #343A40;
+    height: 25vh !important;
+    border-radius: 10px;
+}
+

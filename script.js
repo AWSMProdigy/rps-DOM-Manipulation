@@ -43,6 +43,11 @@ function compareChoices(userSelection, computerSelection) {
   console.log("Wins: " + wins)
   console.log("Losses: " + losses)
   console.log("Ties: " + ties);
+  printResults()
+}
+
+function printResults() {
+
 }
 
 startGame();
