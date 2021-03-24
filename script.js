@@ -36,12 +36,13 @@ function compareChoices(userSelection, computerSelection) {
   ) {
     wins++;
   } else {
-    loss++;
+    losses++;
   }
-  // console.log(user);
-  // console.log(computer);
+  console.log("user: " + userSelection);
+  console.log("computer: " + computerSelection);
   console.log("Wins: " + wins)
   console.log("Losses: " + losses)
+  console.log("Ties: " + ties);
 }
 
 startGame();
