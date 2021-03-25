@@ -26,12 +26,12 @@ ul {
   border-radius: 10px;
 }
 
-#player-success,
+/* #player-success,
 #computer-success,
 #player-failure,
 #computer-failure {
   display: none;
-}
+} */
 
 @media only screen and (max-width: 1200px) {
   .btn {
