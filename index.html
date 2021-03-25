@@ -33,23 +33,29 @@
         <div class="row text-light">
           <div class="col-5 offset-1 bg-dark">
             <h1 class="text-center p-1" id="user-choice">🧍</h1>
-            <p class ="text-center mr-5" id="player-icon">Wins:</p>
-            <p class ="text-center mr-5" id="player-icon">Losses:</p>
+            <div class="alert alert-success text-center" id = "player-success"role="alert">
+              Success! You beat the computer... this time
+            </div>
+            <div class="alert alert-danger text-center" id="player-failure" role="alert">
+              Have you tried turning it off and back on again?
+            </div>
             
           </div>
-          
-          
-          <div class="col-5  bg-dark  ">
-            <h1 class="text-center p-1" id="computer-choice">💻</h1>
-            <p class ="text-center mr-5" id ="computer-icon">Wins:</p>
-          </div>
 
+          <div class="col-5 bg-dark">
+            <h1 class="text-center p-1" id="computer-choice">💻</h1>
+            <div class="alert alert-success text-center" id = "computer-success" role="alert">
+              Success! The humans will not last!
+            </div>
+            <div class="alert alert-danger text-center" id="computer-failure" role="alert">
+              Error! Error! Does not compute!
+            </div>
+            
+            
+          </div>
         </div>
       </div>
     </div>
-
-    
-    
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

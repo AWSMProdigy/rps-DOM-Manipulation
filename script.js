@@ -1,9 +1,16 @@
-let wins = 0;
-let losses = 0;
+let playerWins = 0;
+let playerLosses = 0;
+
+let computerWins = 0;
+let computerLosses = 0;
+
 let ties = 0;
+
+let rounds = 0;
 
 const rps = ["rock", "paper", "scissors"];
 
+// Start the game
 function startGame() {
   let btns = document.querySelectorAll(".btn");
   console.log(btns);
@@ -13,11 +20,12 @@ function startGame() {
       // console.log("user " + userChoice);
       let compChoice = computerChoice();
       // console.log("computer " + compChoice);
-      compareChoices(userChoice, compChoice);
+      compareChoices(userChoice, compChoice);    
     });
   });
 }
 
+// Computer choice function
 function computerChoice() {
   randomIndex = Math.floor(Math.random() * rps.length);
   // console.log(randomIndex);
@@ -26,6 +34,7 @@ function computerChoice() {
   return computerChoice;
 }
 
+// Function for comparing choices and deciding a winner
 function compareChoices(userSelection, computerSelection) {
   if (userSelection === computerSelection) {
     ties++;
@@ -34,20 +43,33 @@ function compareChoices(userSelection, computerSelection) {
     (userSelection === "scissors" && computerSelection === "paper") ||
     (userSelection === "paper" && computerSelection === "rock")
   ) {
-    wins++;
+    playerWins++;
+    computerLosses++;
+    document.getElementById("player-success").style.display = "block";
+    document.getElementById("computer-failure").style.display = "block";
   } else {
-    losses++;
+    playerLosses++;
+    computerWins++;
+    document.getElementById("computer-success").style.display = "block";
+    document.getElementById("player-failure").style.display = "block";
   }
   console.log("user: " + userSelection);
   console.log("computer: " + computerSelection);
-  console.log("Wins: " + wins)
-  console.log("Losses: " + losses)
+  console.log("Wins: " + playerWins);
+  console.log("Losses: " + playerLosses);
   console.log("Ties: " + ties);
-  printResults()
+  printResults();
 }
 
-function printResults() {
-
+function clearAlerts() {
+  document.getElementById("player-success").style.display = "none";
+  document.getElementById("player-failure").style.display = "none";
+  document.getElementById("computer-success").style.display = "none";
+  document.getElementById("computer-failure").style.display = "none";
+ 
+  
 }
+
+function printResults() {}
 
 startGame();
