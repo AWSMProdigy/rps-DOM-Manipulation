@@ -26,12 +26,14 @@ ul {
   border-radius: 10px;
 }
 
-/* #player-success,
-#computer-success,
-#player-failure,
-#computer-failure {
-  display: none;
-} */
+
+#user-page-score {
+  font-size: 1.6em;;
+  margin: 0;
+  padding: 0;
+  display:inline;
+}
+
 
 @media only screen and (max-width: 1200px) {
   .btn {

@@ -26,13 +26,8 @@ function startGame() {
 
 // TODO Figure out how to make alerts appear/dissapear properly
 
-
-  
-
-
 // Computer choice function
 function computerChoice() {
-  
   randomIndex = Math.floor(Math.random() * rps.length);
   // console.log(randomIndex);
   let computerChoice = rps[randomIndex];
@@ -42,8 +37,14 @@ function computerChoice() {
 
 // Function for comparing choices and deciding a winner
 function compareChoices(userSelection, computerSelection) {
-  clearPreviousAlerts()
+  clearPreviousAlerts();
+
+  if (rounds < 5) {
+    rounds++;
+  }
+
   if (userSelection === computerSelection) {
+    $(".tie").show();
     ties++;
   } else if (
     (userSelection === "rock" && computerSelection === "scissors") ||
@@ -66,15 +67,13 @@ function compareChoices(userSelection, computerSelection) {
   console.log("Wins: " + playerWins);
   console.log("Losses: " + playerLosses);
   console.log("Ties: " + ties);
+  console.log("Rounds: " + rounds);
   printResults();
 }
 
 function clearPreviousAlerts() {
   console.log("function firing");
-  $("#player-success").hide();
-  $("#computer-success").hide();
-  $("#player-failure").hide();
-  $("#computer-failure").hide();
+  $('.alert').hide()
 }
 
 function printResults() {
