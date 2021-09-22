@@ -26,6 +26,18 @@ ul {
   border-radius: 10px;
 }
 
+.scoreboard{
+  color: white;
+  border-radius: 10px;
+  background: #343a40;
+  display: flex;
+  justify-content: space-between;
+}
+
+.scoreboard p{
+  margin: 5px auto;
+}
+
 
 #user-page-score {
   font-size: 1.6em;;

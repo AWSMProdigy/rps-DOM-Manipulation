@@ -7,6 +7,9 @@ let ties = 0;
 let rounds = 0;
 
 const rps = ["rock", "paper", "scissors"];
+var winSB = document.getElementById("winValue");
+var lossSB = document.getElementById("lossValue");
+var tieSB = document.getElementById("tieValue");
 
 // Start the game
 function startGame() {
@@ -68,6 +71,9 @@ function compareChoices(userSelection, computerSelection) {
   console.log("Losses: " + playerLosses);
   console.log("Ties: " + ties);
   console.log("Rounds: " + rounds);
+  winSB.innerHTML = String(playerWins);
+  lossSB.innerHTML = String(playerLosses);
+  tieSB.innerHTML = String(ties);
   printResults();
 }
 
